@@ -14,20 +14,15 @@ namespace desafio.Models
         public string Id { get; set; }
 
         //Type diz se é CD/DVD/LIVRO
-        public enum Type
-        {
-            none,
-            cd,
-            dvd,
-            book
-        }
+        [BsonElement("Type")]
+        public string Type { get; set; }
 
         [BsonElement("Name")]
         public string Name { get; set; }
 
         [BsonElement("State")]
         //State representa Disponivel ou emprestado.
-        public bool State { get; set; }
+        public string State { get; set; }
 
         [BsonElement("Year")]
         public string Year { get; set; }
@@ -35,7 +30,7 @@ namespace desafio.Models
         [BsonElement("Genres")]
         public string Genres { get; set; }
 
-        [BsonElement("Desciption")]
+        [BsonElement("Description")]
         public string Description { get; set; }
 
     }
