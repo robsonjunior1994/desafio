@@ -1,4 +1,4 @@
-﻿<h1>AdicionarItem</h1>
+﻿<h1>EditarItem</h1>
 <form id="form">
     <table>
         <tr>
@@ -6,7 +6,7 @@
                 Tipo:
             </td>
             <td>
-                <select id="type">
+                <select id="type-edit">
                     <option>CD</option>
                     <option>DVD</option>
                     <option>Livro</option>
@@ -15,28 +15,29 @@
         </tr>
         <tr>
             <td>Nome</td>
-            <td><input type="text" id="name" /></td>
+            <td><input type="text" id="name-edit" /></td>
         </tr>
         <tr>
             <td>Disponível</td>
-            <td><input type="radio" id="state" value="Disponivel" /> Sim</td>
-            <td><input type="radio" id="state" value="Emprestado" /> Não</td>
+            <td><input type="radio" id="state-disponivel" value="Disponivel" /> Sim</td>
+            <td><input type="radio" id="state-emprestado" value="Emprestado" /> Não</td>
         </tr>
         <tr>
             <td>Ano</td>
-            <td><input type="text" id="year" /></td>
+            <td><input type="text" id="year-edit" /></td>
         </tr>
         <tr>
             <td>Genero</td>
-            <td><input type="text" id="genres" /></td>
+            <td><input type="text" id="genres-edit" /></td>
         </tr>
         <tr>
             <td>Descrição</td>
-            <td><textarea id="description"></textarea></td>
+            <td><textarea id="description-edit"></textarea></td>
         </tr>
         <tr>
             <td><input type="submit" value="Salvar" /></td>
         </tr>
     </table>
-    
 </form>
+
+

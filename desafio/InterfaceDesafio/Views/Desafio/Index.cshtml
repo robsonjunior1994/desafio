@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de itens</h1>
+
+<div id="spoiler">
+    <h3 id="my-top">Editar</h3>
+    <form class="my-form">
+        <input type="hidden" id="edit-id">
+        <select id="edit-type">
+            <option>CD</option>
+            <option>DVD</option>
+            <option>Livro</option>
+        </select>
+        <input type="text" id="edit-name" placeholder="Nome">
+        <!-- <input type="text" id="edit-state" placeholder="Status"> -->
+        <select id="edit-state">
+            <option>Disponivel</option>
+            <option>Emprestado</option>
+        </select>
+        <input type="text" id="edit-year" placeholder="Ano">
+        <input type="text" id="edit-genres" placeholder="Genero">
+        <input type="text" id="edit-description" placeholder="Descrição">
+        <input type="submit" value="Atualizar">
+        <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+    </form>
+</div>
+<br/>
+
+<table class="table">
+    <tr>
+        <th>Tipo</th>
+        <th>Nome</th>
+        <th>Disponivel</th>
+        <th>Ano</th>
+        <th>Genero</th>
+        <th>Descrição</th>
+        <th>Emprestar</th>
+        <th>Pegar de volta</th>
+    </tr>
+    <tbody id="items"></tbody>
+</table>
+
