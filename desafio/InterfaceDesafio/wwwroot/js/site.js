@@ -13,6 +13,7 @@ $(function () {
             name: $("#name").val(),
             state: $("#state").val(),
             year: $("#year").val(),
+            BorrowedTo: "Ninguem",
             genres: $("#genres").val(),
             description: $("#description").val()
         };
@@ -76,6 +77,7 @@ function getData() {
                     .append($("<td></td>").text(item.type))
                     .append($("<td></td>").text(item.name))
                     .append($("<td></td>").text(item.state))
+                    .append($("<td></td>").text(item.borrowedTo))
                     .append($("<td></td>").text(item.year))
                     .append($("<td></td>").text(item.genres))
                     .append($("<td></td>").text(item.description))
@@ -119,7 +121,7 @@ function emprestarItem(id) {
     $.each(items, function (key, item) {
         if (item.id === id) {
             alert("Emprestar");
-            $("#eemprestar-id").val(item.id);
+            $("#emprestar-id").val(item.id);
             $("#emprestar-type").val(item.type);
             $("#emprestar-name").val(item.name);
             $("#emprestar-state").val(item.state);
@@ -174,8 +176,38 @@ $(".my-form").on("submit", function (e) {
     return false;
 });
 
+$(".my-form-emprestar").on("submit", function (e) {
+    e.preventDefault();
+
+    const item = {
+        id: $("#emprestar-id").val(),
+        type: $("#emprestar-type").val(),
+        name: $("#emprestar-name").val(),
+        state: "Indisponivel",
+        borrowedTo: $("#contatos").val(),
+        year: $("#emprestar-year").val(),
+        genres: $("#emprestar-genres").val(),
+        description: $("#emprestar-description").val()
+    };
+    console.log(item);
+    $.ajax({
+        url: uri + "/" + $("#emprestar-id").val(),
+        type: "PUT",
+        accepts: "application/json",
+        contentType: "application/json",
+        data: JSON.stringify(item),
+        success: function (result) {
+            getData();
+        }
+    });
+
+    closeInput();
+    return false;
+});
+
 function closeInput() {
     $("#spoiler").css({ display: "none" });
+    $("#spoilerEmprestar").css({ display: "none" });
 }
 
 

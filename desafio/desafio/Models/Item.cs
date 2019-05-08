@@ -33,5 +33,8 @@ namespace desafio.Models
         [BsonElement("Description")]
         public string Description { get; set; }
 
+        [BsonElement("BorrowedTo")]
+        public string BorrowedTo { get; set; }
+
     }
 }
