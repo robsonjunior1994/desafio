@@ -40,22 +40,23 @@ $(function () {
 /* --------------------------------------------------------------------------------------------- */
 $(document).ready(function () {
     getData();
+    getContatos();
 });
 
 function getContatos() {
+    let option = null;
     $.ajax({
         type: "GET",
-        url: "",
+        url: "https://localhost:44393/api/Contact",
         cache: false,
         success: function (data) {
             const optContatos = $("#contatos");
 
             $(optContatos).empty();
-            $.each(data, function (key, item)){
-                const option = $("<option></option>").text(item.nome);
-            }
-
-            option.appendTo(optContatos);
+            $.each(data, function (key, item) {
+                option = $("<option></option>").text(item.name);
+                option.appendTo(optContatos);
+            });
         }
     });
 }
