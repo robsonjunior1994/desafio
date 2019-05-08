@@ -38,6 +38,7 @@ namespace desafio
                         .AllowAnyOrigin();
                 });
             });
+            services.AddScoped<ContactService>();
             services.AddScoped<ItemService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

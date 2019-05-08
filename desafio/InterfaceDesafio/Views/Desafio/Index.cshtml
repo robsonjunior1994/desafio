@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
@@ -27,7 +26,45 @@
         <a onclick="closeInput()" aria-label="Close">&#10006;</a>
     </form>
 </div>
-<br/>
+
+<div id="spoilerEmprestar">
+    <form class="my-form-emprestar">
+        <table>
+            <input type="hidden" id="emprestar-id">
+            <tr>
+                <td>Tipo</td>
+                <td><input type="text" id="emprestar-type" disabled/></td>
+            </tr>
+            <tr>
+                <td>Nome</td>
+                <td><input type="text" id="emprestar-name" disabled/></td>
+            </tr>
+            <tr>
+                <td>Contato</td>
+                <td><select id="contatos">
+                        <option>Nenhum</option>    
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Emprestar">
+                    <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                </td>
+            </tr>
+
+            <select id="emprestar-state" hidden>
+                <option selected>Disponivel</option>
+                <option>Emprestado</option>
+            </select>
+            <input type="text" id="emprestar-year" placeholder="Ano" hidden disabled>
+            <input type="text" id="emprestar-genres" placeholder="Genero" hidden disabled>
+            <input type="text" id="emprestar-description" placeholder="Descrição" hidden disabled>
+            
+        </table>
+    </form>
+</div>
+<br />
 
 <table class="table">
     <tr>

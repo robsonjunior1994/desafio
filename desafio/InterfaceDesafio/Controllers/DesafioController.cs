@@ -17,10 +17,5 @@ namespace InterfaceDesafio.Controllers
         {
             return View();
         }
-
-        public IActionResult EditarItem()
-        {
-            return View();
-        }
     }
 }

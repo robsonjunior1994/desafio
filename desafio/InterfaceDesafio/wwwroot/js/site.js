@@ -42,6 +42,24 @@ $(document).ready(function () {
     getData();
 });
 
+function getContatos() {
+    $.ajax({
+        type: "GET",
+        url: "",
+        cache: false,
+        success: function (data) {
+            const optContatos = $("#contatos");
+
+            $(optContatos).empty();
+            $.each(data, function (key, item)){
+                const option = $("<option></option>").text(item.nome);
+            }
+
+            option.appendTo(optContatos);
+        }
+    });
+}
+
 function getData() {
     $.ajax({
         type: "GET",
@@ -94,6 +112,22 @@ function getData() {
             items = data;
         }
     });
+}
+
+function emprestarItem(id) {
+    $.each(items, function (key, item) {
+        if (item.id === id) {
+            alert("Emprestar");
+            $("#eemprestar-id").val(item.id);
+            $("#emprestar-type").val(item.type);
+            $("#emprestar-name").val(item.name);
+            $("#emprestar-state").val(item.state);
+            $("#emprestar-year").val(item.year);
+            $("#emprestar-genres").val(item.genres);
+            $("#emprestar-description").val(item.description);
+        }
+    });
+    $("#spoilerEmprestar").css({ display: "block" });
 }
 
 function editItem(id) {
@@ -153,3 +187,4 @@ function deleteItem(id) {
         }
     });
 }
+
