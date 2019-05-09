@@ -29,6 +29,16 @@ namespace desafio.Services
             return _items.Find<Item>(item => item.Id == id).FirstOrDefault();
         }
 
+        public Item Buscar(string keyword)
+        {
+            Item itemIn = new Item();
+            itemIn.Name = keyword;
+            //return _items.Find<Item>(item => item.Name == LIKE keyword).FirstOrDefault();
+            //return _items.Find<Item>(item => item.Name == itemIn.Name).FirstOrDefault();
+            //return _items.find({$text: {$search: "Sorriso"} });
+            //return collection.Find()
+        }
+
         public Item Create(Item item)
         {
             _items.InsertOne(item);

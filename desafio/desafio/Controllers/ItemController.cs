@@ -30,6 +30,18 @@ namespace desafio.Controllers
         public ActionResult<Item> Get(string id)
         {
             var item = _itemService.Get(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return item;
+        }
+
+        [HttpGet("{keyword}")]
+        public ActionResult<Item> Buscar(string keyword)
+        {
+            var item = _itemService.Buscar(keyword);
             if(item == null)
             {
                 return NotFound();
