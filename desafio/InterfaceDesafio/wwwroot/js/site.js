@@ -132,14 +132,15 @@ function emprestarItem(id) {
     });
     $("#spoilerEmprestar").css({ display: "block" });
 }
-
-function editItem(id) {
+let borrowedTo = "";
+function editItem(id) { 
     $.each(items, function (key, item) {
         if (item.id === id) {
             $("#edit-id").val(item.id);
             $("#edit-type").val(item.type);
             $("#edit-name").val(item.name);
             $("#edit-state").val(item.state);
+            borrowedTo = item.borrowedTo;
             $("#edit-year").val(item.year);
             $("#edit-genres").val(item.genres);
             $("#edit-description").val(item.description);
@@ -156,6 +157,7 @@ $(".my-form").on("submit", function (e) {
         type: $("#edit-type").val(),
         name: $("#edit-name").val(),
         state: $("#edit-state").val(),
+        borrowedTo: borrowedTo,
         year: $("#edit-year").val(),
         genres: $("#edit-genres").val(),
         description: $("#edit-description").val()
