@@ -84,7 +84,7 @@ function getData() {
                   
                     .append(
                         $("<td></td>").append(
-                            $("<button>Emprestar</button>").on("click", function () {
+                            $("<a href='#my-top'><button>Emprestar</button></a>").on("click", function () {
                                 emprestarItem(item.id);
                             })
                         )
@@ -120,7 +120,7 @@ function getData() {
 function emprestarItem(id) {
     $.each(items, function (key, item) {
         if (item.id === id) {
-            alert("Emprestar");
+            //alert("Emprestar");
             $("#emprestar-id").val(item.id);
             $("#emprestar-type").val(item.type);
             $("#emprestar-name").val(item.name);
@@ -227,7 +227,7 @@ function deleteItem(id) {
 
 function pegarItem(id) {
     $.each(items, function (key, item) {
-        if (item.id === id && item.borrowedTo != "Ninguém" && item.state != "Disponível") {
+        if (item.id === id && item.borrowedTo !== "Ninguém" && item.state !== "Disponível") {
             alert("O " + item.type + ", " + item.name+" "+"foi pego de volta");
             $("#emprestar-id").val(item.id);
             $("#emprestar-type").val(item.type);
