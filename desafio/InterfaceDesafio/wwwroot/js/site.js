@@ -183,7 +183,7 @@ $(".my-form-emprestar").on("submit", function (e) {
         id: $("#emprestar-id").val(),
         type: $("#emprestar-type").val(),
         name: $("#emprestar-name").val(),
-        state: "Indisponivel",
+        state: "Indisponível",
         borrowedTo: $("#contatos").val(),
         year: $("#emprestar-year").val(),
         genres: $("#emprestar-genres").val(),
@@ -205,6 +205,8 @@ $(".my-form-emprestar").on("submit", function (e) {
     return false;
 });
 
+
+
 function closeInput() {
     $("#spoiler").css({ display: "none" });
     $("#spoilerEmprestar").css({ display: "none" });
@@ -221,3 +223,40 @@ function deleteItem(id) {
     });
 }
 
+function pegarItem(id) {
+    $.each(items, function (key, item) {
+        if (item.id === id && item.borrowedTo != "Ninguém" && item.state != "Disponível") {
+            alert("O " + item.type + ", " + item.name+" "+"foi pego de volta");
+            $("#emprestar-id").val(item.id);
+            $("#emprestar-type").val(item.type);
+            $("#emprestar-name").val(item.name);
+            $("#emprestar-year").val(item.year);
+            $("#emprestar-genres").val(item.genres);
+            $("#emprestar-description").val(item.description);
+
+        }
+    });
+
+    let item = {
+        id: $("#emprestar-id").val(),
+        type: $("#emprestar-type").val(),
+        name: $("#emprestar-name").val(),
+        state: "Disponível",
+        borrowedTo: "Ninguem",
+        year: $("#emprestar-year").val(),
+        genres: $("#emprestar-genres").val(),
+        description: $("#emprestar-description").val()
+    };
+    console.log(item);
+    $.ajax({
+        url: uri + "/" + $("#emprestar-id").val(),
+        type: "PUT",
+        accepts: "application/json",
+        contentType: "application/json",
+        data: JSON.stringify(item),
+        success: function (result) {
+            getData();
+        }
+    });
+
+}
