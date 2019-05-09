@@ -32,7 +32,11 @@ namespace desafio.Services
         public Item Buscar(string keyword)
         {
             //Colocar verificação se keyword for vazinho buscar o metodo get que retorna tudo ou alaramr que não foi encontrado
-     
+            //if (keyword == "")
+            //{
+            //    Get();
+            //}
+
             Item itemIn = new Item();
             itemIn.Name = keyword;
 
