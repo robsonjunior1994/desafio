@@ -29,9 +29,13 @@ $(function () {
             dataType: 'json',
             success: function(item) {
                 console.log(item);
+               alert("O Item foi adicionado com sucesso");
+                location.href = "https://localhost:44328/Desafio/";
+                
             },
             error: function (item) {
                 console.log("Falhou");
+                alert("Preencha todos os campos!")
             }
 
         });
