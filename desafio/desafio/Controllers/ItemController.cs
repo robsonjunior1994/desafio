@@ -38,11 +38,11 @@ namespace desafio.Controllers
             return item;
         }
 
-        [HttpGet("{keyword}")]
-        public ActionResult<Item> Buscar(string keyword)
+        [HttpGet("Buscar/{name}")]  // seu get vai controller/buscar/name
+        public ActionResult<Item> Buscar(string name)
         {
-            var item = _itemService.Buscar(keyword);
-            if(item == null)
+            var item = _itemService.Buscar(name);
+            if (item == null)
             {
                 return NotFound();
             }

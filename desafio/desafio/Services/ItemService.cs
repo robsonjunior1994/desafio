@@ -31,14 +31,15 @@ namespace desafio.Services
 
         public Item Buscar(string keyword)
         {
+            //Colocar verificação se keyword for vazinho buscar o metodo get que retorna tudo ou alaramr que não foi encontrado
+     
             Item itemIn = new Item();
             itemIn.Name = keyword;
-            //return _items.Find<Item>(item => item.Name == LIKE keyword).FirstOrDefault();
-            //return _items.Find<Item>(item => item.Name == itemIn.Name).FirstOrDefault();
-            //return _items.find({$text: {$search: "Sorriso"} });
-            //return collection.Find()
-        }
 
+            var itemUp = _items.Find<Item>(item => item.Name.ToLower() == itemIn.Name.ToLower()).FirstOrDefault();
+            return itemUp;
+        }
+        
         public Item Create(Item item)
         {
             _items.InsertOne(item);
