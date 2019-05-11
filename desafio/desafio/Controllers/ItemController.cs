@@ -13,9 +13,9 @@ namespace desafio.Controllers
     [ApiController]
     public class ItemController : ControllerBase
     {
-        private readonly ItemService _itemService;
+        private readonly IItemService _itemService;
 
-        public ItemController(ItemService itemService)
+        public ItemController(IItemService itemService)
         {
             _itemService = itemService;
         }

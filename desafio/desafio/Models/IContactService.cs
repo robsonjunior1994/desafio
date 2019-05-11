@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace desafio.Models
 {
-    interface IContactService
+    public interface IContactService
     {
         List<Contact> Get();
         Contact Get(string id);

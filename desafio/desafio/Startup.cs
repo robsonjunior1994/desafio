@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using desafio.Models;
 using desafio.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -38,8 +39,8 @@ namespace desafio
                         .AllowAnyOrigin();
                 });
             });
-            services.AddScoped<ContactService>();
-            services.AddScoped<ItemService>();
+            services.AddScoped<IContactService, ContactService>();
+            services.AddScoped<IItemService, ItemService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
