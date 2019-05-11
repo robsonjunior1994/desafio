@@ -17,5 +17,10 @@ namespace InterfaceDesafio.Controllers
         {
             return View();
         }
+
+        public IActionResult IndexContact()
+        {
+            return View();
+        }
     }
 }

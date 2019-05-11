@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "IndexContact";
+}
+
+<div class="container">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#janela" id="adicionar-contato">Adicionar</button>
+
+    <div class="modal fade" role="dialog" id="janela">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adicionar Contato</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form" id="form-contact">
+                        <table class="table">
+                            <input type="hidden" id="id-contato">
+                            <tr>
+                                <td>Nome</td>
+                                <td><input class="form-control" type="text" id="nome-contato" /></td>
+                            </tr>
+                            <tr>
+                                <td>Celular</td>
+                                <td><input class="form-control" type="text" id="celular-contato" /></td>
+                            </tr>
+                            <tr>
+                                <td>Endereço</td>
+                                <td><input class="form-control" type="text" id="endereco-contato" /></td>
+                            </tr>
+                        </table>
+                        <td><input class="btn btn-primary form-control" type="submit"/></td>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <button hidden class="btn btn-primary" data-toggle="modal" data-target="#janela-editar" id="janela-editar-contato">Adicionar</button>
+
+    <div class="modal fade" role="dialog" id="janela-editar">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Contato</h5>
+                    <button class="close" data-dismiss="modal"><span id="span-close">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form" id="editar-form-contact">
+                        <table class="table">
+                            <input type="hidden" id="editar-id-contato">
+                            <tr>
+                                <td>Nome</td>
+                                <td><input class="form-control" type="text" id="editar-nome-contato" /></td>
+                            </tr>
+                            <tr>
+                                <td>Celular</td>
+                                <td><input class="form-control" type="text" id="editar-celular-contato" /></td>
+                            </tr>
+                            <tr>
+                                <td>Endereço</td>
+                                <td><input class="form-control" type="text" id="editar-endereco-contato" /></td>
+                            </tr>
+                        </table>
+                        <td><input class="btn btn-primary form-control" type="submit" /></td>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h1>Contatos</h1>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Celular</th>
+        <th>Endereço</th>
+    </tr>
+    <tbody id="contatos-body"></tbody>
+</table>
