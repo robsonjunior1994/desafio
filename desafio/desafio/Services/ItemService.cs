@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace desafio.Services
 {
-    public class ItemService
+    public class ItemService : IItemService
     {
         private readonly IMongoCollection<Item> _items;
 

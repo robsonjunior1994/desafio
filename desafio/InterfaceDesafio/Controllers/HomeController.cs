@@ -17,7 +17,7 @@ namespace InterfaceDesafio.Controllers
 
         public IActionResult Privacy()
         {
-            return RedirectToAction("Index", "Desafio");
+            return RedirectToAction("IndexContact", "Desafio");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

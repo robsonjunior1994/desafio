@@ -109,7 +109,7 @@ function getData() {
                     )
                 ).append(
                     $("<td></td>").append(
-                        $("<button class='btn-danger'>X</button>").on("click", function () {
+                        $("<button class='btn btn-danger'>X</button>").on("click", function () {
                             deleteItem(item.id);
                         })
                     )
@@ -153,26 +153,26 @@ $(function () {
                             .append(
                                 $("<td></td>").append(
                                     $("<a href='#my-top'><button>Emprestar</button></a>").on("click", function () {
-                                        emprestarItem(item.id);
+                                        emprestarItem(data.id);
                                     })
                                 )
                             )
                             .append(
                                 $("<td></td>").append(
                                     $("<button>Pegar</button>").on("click", function () {
-                                        pegarItem(item.id);
+                                        pegarItem(data.id);
                                     })
                                 )
                             ).append(
                                 $("<td></td>").append(
                                     $("<a href='#my-top'><button class='editar' >Editar</button></a>").on("click", function () {
-                                        editItem(item.id);
+                                        editItem(data.id);
                                     })
                                 )
                             ).append(
                                 $("<td></td>").append(
-                                    $("<button class='btn-danger'>X</button>").on("click", function () {
-                                        deleteItem(item.id);
+                                    $("<button class='btn btn-danger'>X</button>").on("click", function () {
+                                        deleteItem(data.id);
                                     })
                                 )
                             );

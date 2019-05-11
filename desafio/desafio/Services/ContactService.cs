@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace desafio.Services
 {
-    public class ContactService
+    public class ContactService : IContactService
     {
         private readonly IMongoCollection<Contact> _contact;
 
