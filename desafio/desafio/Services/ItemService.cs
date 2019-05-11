@@ -24,11 +24,39 @@ namespace desafio.Services
             return _items.Find(item => true).ToList();
         }
 
-        public List<Item> BuscarTipo(string type)
+        public List<Item> BuscarTipo(string filtro)
         {
+            List<Item> itemOut = new List<Item>();
             var itemIn = new Item();
-            itemIn.Type = type;
-            return _items.Find(item => item.Type == itemIn.Type).ToList();
+             itemIn.Type = filtro;
+            itemIn.BorrowedTo = filtro;
+            itemIn.Genres = filtro;
+            itemIn.State = filtro;
+            itemIn.Year = filtro;
+
+
+            if (itemOut.Count == 0)
+            {
+                itemOut = _items.Find(item => item.BorrowedTo == itemIn.BorrowedTo).ToList();
+            }
+            if (itemOut.Count == 0)
+            {
+                itemOut = _items.Find(item => item.Genres == itemIn.Genres).ToList();
+            }
+            if (itemOut.Count == 0)
+            {
+                itemOut = _items.Find(item => item.State == itemIn.State).ToList();
+            }
+            if (itemOut.Count == 0)
+            {
+                itemOut = _items.Find(item => item.Type == itemIn.Type).ToList();
+            }
+            if (itemOut.Count == 0)
+            {
+                itemOut = _items.Find(item => item.Year == itemIn.Year).ToList();
+            }
+
+            return itemOut;
         }
 
         public Item Get(string id)

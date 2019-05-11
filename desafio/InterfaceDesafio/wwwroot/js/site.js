@@ -190,6 +190,75 @@ $(function () {
      });
 });
 
+//Filtro
+$(function () {
+    //Função de buscar por palavra chave
+    $('#form-filtro').bind('change', function (e) {
+        e.preventDefault();
+        if ($("#filtro").val() == "") {
+            location.href = "https://localhost:44328/Desafio/";
+        }
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:44393/api/item/buscartipo/" + $("#filtro").val(),
+            cache: false,
+            success: function (data) {
+                const tBody = $("#items");
+
+                $(tBody).empty();
+
+                $.each(data, function () {
+                console.log(data);
+                const tr = $("<tr></tr>")
+                    .append($("<td></td>").text(data.type))
+                    .append($("<td></td>").text(data.name))
+                    .append($("<td></td>").text(data.state))
+                    .append($("<td></td>").text(data.borrowedTo))
+                    .append($("<td></td>").text(data.year))
+                    .append($("<td></td>").text(data.genres))
+                    .append($("<td></td>").text(data.description))
+
+                    .append(
+                        $("<td></td>").append(
+                            $("<a href='#my-top'><button>Emprestar</button></a>").on("click", function () {
+                                emprestarItem(item.id);
+                            })
+                        )
+                    )
+                    .append(
+                        $("<td></td>").append(
+                            $("<button>Pegar</button>").on("click", function () {
+                                pegarItem(item.id);
+                            })
+                        )
+                    ).append(
+                        $("<td></td>").append(
+                            $("<a href='#my-top'><button class='editar' >Editar</button></a>").on("click", function () {
+                                editItem(item.id);
+                            })
+                        )
+                    ).append(
+                        $("<td></td>").append(
+                            $("<button class='btn-danger'>X</button>").on("click", function () {
+                                deleteItem(item.id);
+                            })
+                        )
+                    );
+
+                tr.appendTo(tBody);
+                });
+
+                items = data;
+            },
+            erro: function () {
+                location.href = uri;
+            }
+        });
+
+    });
+});
+
+
 function emprestarItem(id) {
     $.each(items, function (key, item) {
         if (item.id === id) {
