@@ -14,7 +14,13 @@ namespace UnitTests
         internal Mock<IItemService> itemServiceMock;
         internal ContactController sutContact;
         internal Mock<IContactService> contactServiceMock;
-        
+
+        internal string itemId;
+
+        public void PopularId()
+        {
+            itemId = "5cd6e1d6820e2c38583c1cd4";
+        }
 
         public void CriarItemController()
         {

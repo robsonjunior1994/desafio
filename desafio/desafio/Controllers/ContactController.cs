@@ -41,6 +41,11 @@ namespace desafio.Controllers
         [HttpPost]
         public ActionResult<Contact> Create(Contact contact)
         {
+            if(contact == null)
+            {
+                return NotFound();
+            }
+
             _contactService.Create(contact);
             return CreatedAtRoute("GetContact", new { id = contact.Id.ToString() }, contact);
         }

@@ -387,7 +387,7 @@ function pegarItem(id) {
         type: $("#emprestar-type").val(),
         name: $("#emprestar-name").val(),
         state: "Disponível",
-        borrowedTo: "Ninguem",
+        borrowedTo: "Ninguém",
         year: $("#emprestar-year").val(),
         genres: $("#emprestar-genres").val(),
         description: $("#emprestar-description").val()
