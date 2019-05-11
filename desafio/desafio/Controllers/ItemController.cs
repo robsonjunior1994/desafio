@@ -26,6 +26,18 @@ namespace desafio.Controllers
             return _itemService.Get();
         }
 
+        [HttpGet("BuscarTipo/{type}")]
+        public ActionResult<List<Item>> BuscarTipo(string type)
+        {
+            var item = _itemService.BuscarTipo(type);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return item;
+        }
+
         [HttpGet("{id}", Name = "GetItem")]
         public ActionResult<Item> Get(string id)
         {

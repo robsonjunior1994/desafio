@@ -24,6 +24,13 @@ namespace desafio.Services
             return _items.Find(item => true).ToList();
         }
 
+        public List<Item> BuscarTipo(string type)
+        {
+            var itemIn = new Item();
+            itemIn.Type = type;
+            return _items.Find(item => item.Type == itemIn.Type).ToList();
+        }
+
         public Item Get(string id)
         {
             return _items.Find<Item>(item => item.Id == id).FirstOrDefault();
