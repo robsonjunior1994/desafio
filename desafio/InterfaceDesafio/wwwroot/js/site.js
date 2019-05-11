@@ -192,7 +192,7 @@ $(function () {
 
 //Filtro
 $(function () {
-    //Função de buscar por palavra chave
+    
     $('#form-filtro').bind('change', function (e) {
         e.preventDefault();
         if ($("#filtro").val() == "") {
@@ -207,16 +207,17 @@ $(function () {
 
                 $(tBody).empty();
 
-                $.each(data, function () {
-                console.log(data);
+                $.each(data, function (key, item) {
+                    console.log(data);
+                    //alert("Entrou no filtro");
                 const tr = $("<tr></tr>")
-                    .append($("<td></td>").text(data.type))
-                    .append($("<td></td>").text(data.name))
-                    .append($("<td></td>").text(data.state))
-                    .append($("<td></td>").text(data.borrowedTo))
-                    .append($("<td></td>").text(data.year))
-                    .append($("<td></td>").text(data.genres))
-                    .append($("<td></td>").text(data.description))
+                    .append($("<td></td>").text(item.type))
+                    .append($("<td></td>").text(item.name))
+                    .append($("<td></td>").text(item.state))
+                    .append($("<td></td>").text(item.borrowedTo))
+                    .append($("<td></td>").text(item.year))
+                    .append($("<td></td>").text(item.genres))
+                    .append($("<td></td>").text(item.description))
 
                     .append(
                         $("<td></td>").append(
