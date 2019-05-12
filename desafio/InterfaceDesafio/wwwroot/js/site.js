@@ -13,7 +13,7 @@ $(function () {
             name: $("#name").val(),
             state: $("#state").val(),
             year: $("#year").val(),
-            BorrowedTo: "Ninguem",
+            BorrowedTo: "Ninguém",
             genres: $("#genres").val(),
             description: $("#description").val()
         };
@@ -122,73 +122,71 @@ function getData() {
         }
     });
 }
-
+// ---------- Buscar por palavra chave -------------//
 $(function () {
-    //Função de buscar por palavra chave
-    $('#search').bind('submit', function (e) {
+    $("#buscar").on('click', function (e) {
         e.preventDefault();
-        if ($("#keyword").val() == "") {
-            location.href = "https://localhost:44328/Desafio/";
-        }
+        console.log(items);
         $.ajax({
             type: "GET",
             url: "https://localhost:44393/api/item/buscar/" + $("#keyword").val(),
             cache: false,
             success: function (data) {
                 const tBody = $("#items");
-
+                alert("entrei no Buscar()");
+                
                 $(tBody).empty();
+                var item = data;
+                //$.each(data, function (key, item) {
+                //console.log(item);
+                //console.log("Item buscado abaixo")
+                //items = item;
+                console.log(items);
+                    const tr = $("<tr></tr>")
+                        .append($("<td></td>").text(item.type))
+                        .append($("<td></td>").text(item.name))
+                        .append($("<td></td>").text(item.state))
+                        .append($("<td></td>").text(item.borrowedTo))
+                        .append($("<td></td>").text(item.year))
+                        .append($("<td></td>").text(item.genres))
+                        .append($("<td></td>").text(item.description))
 
-                //$.each(data, function () {
-                        console.log(data);
-                        const tr = $("<tr></tr>")
-                            .append($("<td></td>").text(data.type))
-                            .append($("<td></td>").text(data.name))
-                            .append($("<td></td>").text(data.state))
-                            .append($("<td></td>").text(data.borrowedTo))
-                            .append($("<td></td>").text(data.year))
-                            .append($("<td></td>").text(data.genres))
-                            .append($("<td></td>").text(data.description))
-
-                            .append(
-                                $("<td></td>").append(
-                                    $("<a href='#my-top'><button>Emprestar</button></a>").on("click", function () {
-                                        emprestarItem(data.id);
-                                    })
-                                )
+                        .append(
+                            $("<td></td>").append(
+                                $("<a href='#my-top'><button>Emprestar</button></a>").on("click", function () {
+                                    emprestarItem(item.id);
+                                })
                             )
-                            .append(
-                                $("<td></td>").append(
-                                    $("<button>Pegar</button>").on("click", function () {
-                                        pegarItem(data.id);
-                                    })
-                                )
-                            ).append(
-                                $("<td></td>").append(
-                                    $("<a href='#my-top'><button class='editar' >Editar</button></a>").on("click", function () {
-                                        editItem(data.id);
-                                    })
-                                )
-                            ).append(
-                                $("<td></td>").append(
-                                    $("<button class='btn btn-danger'>X</button>").on("click", function () {
-                                        deleteItem(data.id);
-                                    })
-                                )
-                            );
+                        )
+                        .append(
+                            $("<td></td>").append(
+                                $("<button>Pegar</button>").on("click", function () {
+                                    pegarItem(item.id);
+                                })
+                            )
+                        ).append(
+                            $("<td></td>").append(
+                                $("<a href='#my-top'><button class='editar' >Editar</button></a>").on("click", function () {
+                                    editItem(item.id);
+                                })
+                            )
+                        ).append(
+                            $("<td></td>").append(
+                                $("<button class='btn btn-danger'>X</button>").on("click", function () {
+                                    deleteItem(item.id);
+                                })
+                            )
+                        );
 
-                        tr.appendTo(tBody);
+                    tr.appendTo(tBody);
                 //});
 
-                items = data;
-            },
-            erro: function () {
-                location.href = uri; 
-            } 
+            }
         });
 
-     });
+    });
 });
+
 
 //Filtro
 $(function () {
@@ -287,7 +285,7 @@ function editItem(id) {
             $("#edit-year").val(item.year);
             $("#edit-genres").val(item.genres);
             $("#edit-description").val(item.description);
-        }
+       }
         console.log(item);
     });
     $("#spoiler").css({ display: "block" });
@@ -447,6 +445,7 @@ function getAllContatos() {
                 );
                 tr.appendTo(tBodyCont);
                 contatos = data;
+                
             });
         }
     });
@@ -507,6 +506,7 @@ function editarContato(id) {
             $("#editar-nome-contato").val(item.name);
             $("#editar-celular-contato").val(item.cel);
             $("#editar-endereco-contato").val(item.end);
+            $('#janela-editar-contato').trigger('click');
         }
         console.log(item);
     });
