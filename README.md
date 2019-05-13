@@ -16,7 +16,8 @@ desafio.Controllers.ItemController.Get (desafio) desafio.Controllers.ItemControl
 
 O programa não sabia em qual GET ele deveria ir, então aprendi a passar o a ActionResult na URL para o programa entender a ActionResult que eu queria naquele momento, a rota [HttpGet("Buscar/{name}")], está indo na API/Controller/Action e passando o parâmetro nome, então consegui entender como dizer para a api a rota que eu espero que ela faça.
 Além do verbo GET, usei outros verbos como por exemplo o POST, PUT e o DELETE, os dois últimos eu nunca tinha usado em aplicação nenhuma, eu entendi que o PUT é utilizado para atualizar e o delete para deletar.
-ContactController 
+
+# ContactController 
 No ContactController eu mantive a mesma pegada porém sem a funcionalidade de buscar um contato por nome, os contatos são listados por ordem de adição no sistema e além de adicionar, podemos editar e excluir.
 
 # Interface
