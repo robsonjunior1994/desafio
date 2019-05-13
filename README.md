@@ -1,56 +1,5 @@
-# desafio
+# Desafio
 
-01) Deve ser possível saber a localização do item. ✅
-R) Os itens são separados por tipo então eles estão localizados através do seu Id no banco dados
-
-02) Podem ter itens repetidos em lugares diferentes.
-R)Você pode ter quantos itens repetidos você quiser mas no banco de dados ele nunca vai ser o mesmo, vai ter sempre um id diferente
-
-03) Podem haver itens emprestados. 
-R) os itens são emprestado atraves de um botão emprestar voce verá um formulário aparecer no topo da página no qual você escolhe uns dos contatos que voc tem na sua lista de contatos
-
-04) Os itens emprestados devem está vinculados a um contato.
-R) Existe uma página onde podemos adicionar os contatos que teremos para possíveis empréstimos de itens
-
-05) O contato na qual está emprestado algo deve ter informações de contato
-R)os contatos são adicionados e listados na página de contatos, onde podemos visualizar as informações desse contato
-
-06) Página de listagem dos itens
-R) Nessa página temos a listagem de todos os itens inclusive com os botões de ações 
-
-07) Deve ser possível ordenar os itens pelas diversas colunas
-R) É possível ordenar os itens por tipo de mídia e se está disponível ou indisponível
-
-08) Deve ser possível filtra o item por:
-		- tipo (DVD, CD ou Livro)✅
-		- Por Status do item (Disponível ou Indisponível)✅
-R) É possível ordenar os itens por tipo de mídia e se está disponível ou indisponível
-
-09) Deve ser possível buscar o livro por palavra chave que busque por todos os campos daquele item.
-R)É possível buscar os itens por palavra chave e ele retorna na lista com os botões das ações. 
-
-10) Deve usar C#
-R) Foi usado a linguagem c#
-
-11) Deve usar WebAPI✅
-Eu aprendi a usar a API nesse projeto, foi muito bom para uma semana entender como funciona o fluxo de uma API e aprendi mais sobre os verbos Http, principalmente PUT e DELETE que não conhecia ainda.
-
-12) Interface deve ser com HTML, CSS e JavaScript
-R)Foi criado um novo projeto ASP.NET Core MVC que chama a a API e renderiza o resultado obtido do banco de dados através da biblioteca JQuery + Ajax que trata os resultados obtidos em JSON 
-
-13) A interface deve fazer chamadas para API✅
-R) ASP.Net core MVC faz um Request para a API
-
-14) O código da interface não deve estar junto da API✅
-15) Deve fazer persistência de dados ... ou NoSQL ->Eu usei o MongoDB 
-16) Deve implementar teste unitários✅
-17) O código deve estar organizado e mais limpo possível 👋🏼
-18) Versionar o projeto no github✅
-19)Explicar o que é o projeto ✅
-20) Explicar como executar o projeto✅
-
-
-
 Criei um sistema distribuído em dois controller:
 
 ItemController
