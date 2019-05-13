@@ -2,7 +2,7 @@
 
 Criei um sistema distribuído em dois controller:
 
-# I temController
+# ItemController
 
 Que representa todos os itens do sistema CD, DVD e Livro.
 
