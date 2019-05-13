@@ -1,0 +1,14 @@
+C:\projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.deps.json
+C:\projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.runtimeconfig.json
+C:\projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.runtimeconfig.dev.json
+C:\projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.dll
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.csprojAssemblyReference.cache
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.csproj.CoreCompileInputs.cache
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.RazorAssemblyInfo.cache
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.RazorAssemblyInfo.cs
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.AssemblyInfoInputs.cache
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.AssemblyInfo.cs
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.RazorTargetAssemblyInfo.cache
+C:\projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.pdb
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.dll
+C:\projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.pdb
