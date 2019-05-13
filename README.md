@@ -73,7 +73,9 @@ Eu usei o github para versionar meu projeto e o board para me organizar e entreg
 # Referências de Estudo 
 
 https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-2.2&tabs=visual-studio#add-a-model
+
 https://docs.microsoft.com/pt-br/aspnet/core/security/cors?view=aspnetcore-2.2
+
 https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-web-api?view=aspnetcore-2.2&tabs=visual-studio#call-the-api-with-jquery
 
 # Considerações finais
