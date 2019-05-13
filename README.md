@@ -3,6 +3,7 @@
 Criei um sistema distribuído em dois controller:
 
 #ItemController
+
 Que representa todos os itens do sistema CD, DVD e Livro.
 
 Dentro de cada controller eu tenho um crud completo onde eu posso adicionar itens por tipo, depois de adicionar eu posso buscar por palavra chave, editar, emprestar, pegar de volta e excluir.
@@ -45,8 +46,6 @@ A princípio estava injetando a própria classe para não  instanciar toda vez o
 
 Acabei deixando o teste unitário por último pois quis atacar logo o que eu tinha mais fresco de aprendizado na minha mente, não implementei a interface nas classes, mas para mockar eu preciso da interface, tive que dar uma refatorada que não demandou tanto tempo assim, então apliquei a interface nos modelos do sistema, e conseguir mockar nos testes usei o padrão SUT e usei o AAA (Arrange, Act, Assert) para fazer uma separação do que iria usar e depois configurei como ficaria o teste e de fato a verificação do que deveria acontecer.
 
-
-
 #Github
 
 Eu usei o github para versionar meu projeto e o board para me organizar e entregar na data correta.
@@ -65,7 +64,6 @@ Eu usei o github para versionar meu projeto e o board para me organizar e entreg
 
 9 - Configurar nas propriedades de inicialização da solução para iniciar os dois projetos ao mesmo tempo projeto (desafio) e (InterfaceDesafio)
 
-
 #Referências de Estudo 
 
 https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-2.2&tabs=visual-studio#add-a-model
@@ -75,4 +73,3 @@ https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-web-api?view=aspnet
 #Considerações finais
 
 O que eu tenho a dizer é muito obrigado por essa oportunidade de tentar entrar para uma empresa tão bacana e mesmo que ainda não tenha entrado para o time, vocês já contribuíram com a minha evolução e amadurecimento, aprendi muito em pouco tempo de estudo e percebi que em 10 dias dá para  aprender muita coisa como API, configurar CORS, mongoBD, JQuery, Ajax, é só ter foco e comprometimento, acredito que esse teste vai servir como um trampolim na minha jornada como desenvolvedor.
-
