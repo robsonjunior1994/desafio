@@ -53,13 +53,19 @@ Eu usei o github para versionar meu projeto e o board para me organizar e entreg
 # Como executar o projeto
 
 1 - SDK 2.2 ou posterior do .NET Core
+
 2 - Visual Studio 2019
+
 3 - instalar o mongoDB 4.0.9
+
 4 - Configurar o mongoDB ( adicionar o caminho da sua pasta bin “C:\Arquivos de Programas\MongoDB\Servidor\<número_de_versão>\bin” a variável de ambiente path do windows, essa alteração possibilita o acesso ao MongoDB a partir de qualquer lugar em seu computador de desenvolvimento.
+
 5- Instalar no nuget a versão mais estável do mongo, -> Install-Package MongoDB.Driver -Version 2.8.0
 
 6 - Instalar no nuget se precisar -> Microsoft.AspNetCore.Mvc.Core 2.2.2
+
 7 - Instalar no nuget se precisar -> Microsoft.AspNetCore.Razor.Design
+
 8 - Instalar no nuget se precisar -> Microsoft.VisualStudio.Web.CodeGenerationDesign 2.2.3
 
 9 - Configurar nas propriedades de inicialização da solução para iniciar os dois projetos ao mesmo tempo projeto (desafio) e (InterfaceDesafio)
