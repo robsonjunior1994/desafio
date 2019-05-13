@@ -133,7 +133,7 @@ $(function () {
             cache: false,
             success: function (data) {
                 const tBody = $("#items");
-                alert("entrei no Buscar()");
+                //alert("entrei no Buscar()");
                 
                 $(tBody).empty();
                 var item = data;
