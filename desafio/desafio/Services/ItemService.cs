@@ -28,33 +28,10 @@ namespace desafio.Services
         {
             List<Item> itemOut = new List<Item>();
             var itemIn = new Item();
-             itemIn.Type = filtro;
-            itemIn.BorrowedTo = filtro;
-            itemIn.Genres = filtro;
-            itemIn.State = filtro;
-            itemIn.Year = filtro;
+            
+            itemIn.Type = filtro;
 
-
-            if (itemOut.Count == 0)
-            {
-                itemOut = _items.Find(item => item.BorrowedTo == itemIn.BorrowedTo).ToList();
-            }
-            if (itemOut.Count == 0)
-            {
-                itemOut = _items.Find(item => item.Genres == itemIn.Genres).ToList();
-            }
-            if (itemOut.Count == 0)
-            {
-                itemOut = _items.Find(item => item.State == itemIn.State).ToList();
-            }
-            if (itemOut.Count == 0)
-            {
-                itemOut = _items.Find(item => item.Type == itemIn.Type).ToList();
-            }
-            if (itemOut.Count == 0)
-            {
-                itemOut = _items.Find(item => item.Year == itemIn.Year).ToList();
-            }
+            itemOut = _items.Find(item => item.Type == itemIn.Type).ToList();
 
             return itemOut;
         }
@@ -98,6 +75,16 @@ namespace desafio.Services
         public void Remove(string id)
         {
             _items.DeleteOne(item => item.Id == id);
+        }
+
+        public List<Item> VerificarStatus(string status)
+        {
+            var ItemQueOUsuarioEstaProcurando = new Item();
+            ItemQueOUsuarioEstaProcurando.State = status;
+
+            var ItemsPorStatus = _items.Find(item => item.State == ItemQueOUsuarioEstaProcurando.State).ToList();
+
+            return ItemsPorStatus;
         }
     }
 }

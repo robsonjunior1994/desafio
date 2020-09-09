@@ -27,7 +27,7 @@ namespace desafio.Controllers
         }
 
         [HttpGet("BuscarTipo/{type}")]
-        public ActionResult<List<Item>> BuscarTipo(string type)
+        public ActionResult<List<Item>> FiltrarPorTipoDoItem(string type)
         {
             Item itemVerificador = new Item();
             itemVerificador.Type = type;
@@ -50,7 +50,7 @@ namespace desafio.Controllers
         public ActionResult<Item> Get(string id)
         {
             Item item = null;
-            if(id.Length > 0)
+            if(string.IsNullOrEmpty(id))
             {
                 item = _itemService.Get(id);
                 if (item == null)
@@ -65,7 +65,7 @@ namespace desafio.Controllers
         public ActionResult<Item> Buscar(string name)
         {
             Item item = null;
-            if(name.Length > 0)
+            if(string.IsNullOrEmpty(name))
             {
                 item = _itemService.Buscar(name);
                 if (item == null)

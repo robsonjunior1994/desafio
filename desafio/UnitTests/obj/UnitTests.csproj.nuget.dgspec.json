@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetos\\desafio\\desafio\\UnitTests\\UnitTests.csproj": {}
+    "C:\\projetos\\Backend\\desafio\\desafio\\UnitTests\\UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\projetos\\desafio\\desafio\\desafio\\desafio.csproj": {
+    "C:\\projetos\\Backend\\desafio\\desafio\\desafio\\desafio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\desafio\\desafio\\desafio\\desafio.csproj",
+        "projectUniqueName": "C:\\projetos\\Backend\\desafio\\desafio\\desafio\\desafio.csproj",
         "projectName": "desafio",
-        "projectPath": "C:\\projetos\\desafio\\desafio\\desafio\\desafio.csproj",
-        "packagesPath": "C:\\Users\\Robson\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\desafio\\desafio\\desafio\\obj\\",
+        "projectPath": "C:\\projetos\\Backend\\desafio\\desafio\\desafio\\desafio.csproj",
+        "packagesPath": "C:\\Users\\robson\\.nuget\\packages\\",
+        "outputPath": "C:\\projetos\\Backend\\desafio\\desafio\\desafio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Robson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\robson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,27 +72,33 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\projetos\\desafio\\desafio\\UnitTests\\UnitTests.csproj": {
+    "C:\\projetos\\Backend\\desafio\\desafio\\UnitTests\\UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\desafio\\desafio\\UnitTests\\UnitTests.csproj",
+        "projectUniqueName": "C:\\projetos\\Backend\\desafio\\desafio\\UnitTests\\UnitTests.csproj",
         "projectName": "UnitTests",
-        "projectPath": "C:\\projetos\\desafio\\desafio\\UnitTests\\UnitTests.csproj",
-        "packagesPath": "C:\\Users\\Robson\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\desafio\\desafio\\UnitTests\\obj\\",
+        "projectPath": "C:\\projetos\\Backend\\desafio\\desafio\\UnitTests\\UnitTests.csproj",
+        "packagesPath": "C:\\Users\\robson\\.nuget\\packages\\",
+        "outputPath": "C:\\projetos\\Backend\\desafio\\desafio\\UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Robson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\robson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,8 +111,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\projetos\\desafio\\desafio\\desafio\\desafio.csproj": {
-                "projectPath": "C:\\projetos\\desafio\\desafio\\desafio\\desafio.csproj"
+              "C:\\projetos\\Backend\\desafio\\desafio\\desafio\\desafio.csproj": {
+                "projectPath": "C:\\projetos\\Backend\\desafio\\desafio\\desafio\\desafio.csproj"
               }
             }
           }
@@ -144,10 +150,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -18,7 +18,7 @@ namespace UnitTests
             //Act
             CriarItemController();
             itemServiceMock.Setup(x => x.BuscarTipo(It.IsAny<string>())).Returns(new List<Item>());
-            sutItem.BuscarTipo("DVD");
+            sutItem.FiltrarPorTipoDoItem("DVD");
             string mensagem = "Retornando Lista filtrada por tipo de item";
             //Assert
             Object.Equals(mensagem, typeof(List<Item>));
@@ -34,7 +34,7 @@ namespace UnitTests
             //Act
             CriarItemController();
             itemServiceMock.Setup(x => x.BuscarTipo(It.IsAny<string>())).Returns(new List<Item>());
-            sutItem.BuscarTipo("Carro");
+            sutItem.FiltrarPorTipoDoItem("Carro");
           
             //Assert
             itemServiceMock.Verify(x => x.BuscarTipo("Carro"), Times.Never);
