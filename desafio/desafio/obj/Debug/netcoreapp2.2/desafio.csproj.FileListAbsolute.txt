@@ -20,7 +20,6 @@ C:\projetos\Backend\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.runt
 C:\projetos\Backend\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.runtimeconfig.dev.json
 C:\projetos\Backend\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.dll
 C:\projetos\Backend\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\desafio.pdb
-C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.csprojAssemblyReference.cache
 C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.AssemblyInfoInputs.cache
 C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.AssemblyInfo.cs
 C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.csproj.CoreCompileInputs.cache

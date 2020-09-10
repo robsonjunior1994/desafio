@@ -31,7 +31,7 @@ namespace desafio.Controllers
         {
             Item itemVerificador = new Item();
             itemVerificador.Type = type;
-            itemVerificador.State = type;
+            //itemVerificador.State = type;
 
             if (type == "CD" || type == "DVD" || type == "Livro" ||
                     type == "Disponível" || type == "Indisponível")
@@ -43,14 +43,14 @@ namespace desafio.Controllers
             {
                 return NotFound();
             }
-            
+
         }
 
         [HttpGet("{id}", Name = "GetItem")]
         public ActionResult<Item> Get(string id)
         {
             Item item = null;
-            if(string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(id))
             {
                 item = _itemService.Get(id);
                 if (item == null)
@@ -58,14 +58,14 @@ namespace desafio.Controllers
                     return NotFound();
                 }
             }
-                return item;
+            return item;
         }
 
         [HttpGet("Buscar/{name}")]  // seu get vai controller/buscar/name
         public ActionResult<Item> Buscar(string name)
         {
             Item item = null;
-            if(string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(name))
             {
                 item = _itemService.Buscar(name);
                 if (item == null)
@@ -80,7 +80,7 @@ namespace desafio.Controllers
         [HttpPost]
         public ActionResult<Item> Create(Item item)
         {
-            if(item == null)
+            if (item == null)
             {
                 return NotFound();
             }
@@ -98,7 +98,7 @@ namespace desafio.Controllers
         {
             Item item;
 
-            if(id.Length > 0)
+            if (id.Length > 0)
             {
                 item = _itemService.Get(id);
             }
@@ -119,7 +119,7 @@ namespace desafio.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
-            if(id.Length > 0)
+            if (id.Length > 0)
             {
                 var item = _itemService.Get(id);
                 if (item == null)
@@ -132,9 +132,24 @@ namespace desafio.Controllers
             }
 
             return NotFound();
-            
-           
-        }
 
+
+        }
+        [HttpGet("BuscarStatus/{status}")]
+        public ActionResult<List<Item>> VerificarStatus(string status)
+        {
+            var listaFiltradaPorStatus = new List<Item>();
+
+            if (!string.IsNullOrEmpty(status))
+            {
+                listaFiltradaPorStatus = _itemService.VerificarStatus(status);
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+            return listaFiltradaPorStatus;
+        }
     }
 }

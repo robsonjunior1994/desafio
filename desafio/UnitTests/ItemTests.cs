@@ -233,5 +233,20 @@ namespace UnitTests
             itemServiceMock.Verify(x => x.Remove(""), Times.Never);
 
         }
+
+        [Trait("ItemController", "Buscar por status dos items")]
+        [Fact(DisplayName = "NaoDeveriraRetornarNadaSePassarAlgumValorDiferenteDeDisponívelOuIndisponível")]
+        public void NaoDeveriraRetornarNadaSePassarAlgumValorDiferenteDeDisponívelOuIndisponível()
+        {
+            //Arrange
+            string status = "online";
+
+            //Act
+            CriarItemController();
+            sutItem.VerificarStatus(status);
+
+            itemServiceMock.Verify(x => x.VerificarStatus(status), Times.Never);
+        }
+
     }
 }

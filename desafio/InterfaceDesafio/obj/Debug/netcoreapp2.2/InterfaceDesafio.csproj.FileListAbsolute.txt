@@ -41,7 +41,6 @@ C:\projetos\Backend\desafio\desafio\InterfaceDesafio\bin\Debug\netcoreapp2.2\Int
 C:\projetos\Backend\desafio\desafio\InterfaceDesafio\bin\Debug\netcoreapp2.2\InterfaceDesafio.pdb
 C:\projetos\Backend\desafio\desafio\InterfaceDesafio\bin\Debug\netcoreapp2.2\InterfaceDesafio.Views.dll
 C:\projetos\Backend\desafio\desafio\InterfaceDesafio\bin\Debug\netcoreapp2.2\InterfaceDesafio.Views.pdb
-C:\projetos\Backend\desafio\desafio\InterfaceDesafio\obj\Debug\netcoreapp2.2\InterfaceDesafio.csprojAssemblyReference.cache
 C:\projetos\Backend\desafio\desafio\InterfaceDesafio\obj\Debug\netcoreapp2.2\InterfaceDesafio.AssemblyInfoInputs.cache
 C:\projetos\Backend\desafio\desafio\InterfaceDesafio\obj\Debug\netcoreapp2.2\InterfaceDesafio.AssemblyInfo.cs
 C:\projetos\Backend\desafio\desafio\InterfaceDesafio\obj\Debug\netcoreapp2.2\InterfaceDesafio.csproj.CoreCompileInputs.cache

@@ -20,7 +20,6 @@ C:\projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\Microsoft.AspNetCo
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csprojAssemblyReference.cache
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.AssemblyInfoInputs.cache
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.AssemblyInfo.cs
-C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csproj.CoreCompileInputs.cache
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.dll
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.pdb
 C:\projetos\Backend\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -38,3 +37,4 @@ C:\projetos\Backend\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\desafio.dl
 C:\projetos\Backend\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\desafio.pdb
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csproj.CopyComplete
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.genruntimeconfig.cache
+C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csproj.CoreCompileInputs.cache
