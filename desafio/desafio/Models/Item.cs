@@ -36,5 +36,20 @@ namespace desafio.Models
         [BsonElement("BorrowedTo")]
         public string BorrowedTo { get; set; }
 
+
+        public string TratandoFiltroDeStatus(string status)
+        {
+            if(status == "Disponivel" || status == "disponivel" || status == "disponível")
+            {
+                status = "Disponível";
+            }
+            if (status == "Indisponivel" || status == "indisponivel" || status == "indisponível")
+            {
+                status = "Indisponível";
+            }
+
+            return status;
+        }
+
     }
 }

@@ -34,7 +34,7 @@ namespace desafio.Controllers
             //itemVerificador.State = type;
 
             if (type == "CD" || type == "DVD" || type == "Livro" ||
-                    type == "Disponível" || type == "Indisponível")
+                    type == "disponivel" || type == "indisponivel")
             {
                 var item = _itemService.BuscarTipo(type);
                 return item;
@@ -84,7 +84,7 @@ namespace desafio.Controllers
             {
                 return NotFound();
             }
-            if (item.Name.Length > 1 && item.BorrowedTo == "Ninguém" && item.State == "Disponível" || item.State == "Indisponível")
+            if (item.Name.Length > 1 && item.BorrowedTo == "ninguem" && item.State == "disponivel" || item.State == "indisponivel")
             {
                 _itemService.Create(item);
                 return CreatedAtRoute("GetItem", new { id = item.Id.ToString() }, item);
@@ -107,7 +107,7 @@ namespace desafio.Controllers
             {
                 return NotFound();
             }
-            if (itemIn.Name.Length > 1 && itemIn.State == "Disponível" || itemIn.State == "Indisponível")
+            if (itemIn.Name.Length > 1 && itemIn.State == "disponivel" || itemIn.State == "indisponivel")
             {
                 _itemService.Update(id, itemIn);
                 return NoContent();
@@ -139,6 +139,8 @@ namespace desafio.Controllers
         public ActionResult<List<Item>> VerificarStatus(string status)
         {
             var listaFiltradaPorStatus = new List<Item>();
+
+            
 
             if (!string.IsNullOrEmpty(status))
             {
