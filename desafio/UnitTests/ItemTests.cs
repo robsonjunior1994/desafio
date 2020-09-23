@@ -1,3 +1,4 @@
+using desafio.Controllers;
 using desafio.Models;
 using Moq;
 using System;
@@ -235,17 +236,19 @@ namespace UnitTests
         }
 
         [Trait("ItemController", "Buscar por status dos items")]
-        [Fact(DisplayName = "NaoDeveriraRetornarNadaSePassarAlgumValorDiferenteDeDisponívelOuIndisponível")]
-        public void NaoDeveriraRetornarNadaSePassarAlgumValorDiferenteDeDisponívelOuIndisponível()
+        [Fact(DisplayName = "DeveriaRetornarListaDeItensPreenchidaQuandoStatusForValido")]
+        public void DeveriaRetornarListaDeItensPreenchidaQuandoStatusForValido()
         {
             //Arrange
-            string status = "online";
+            string status = "disponivel";
+            var ItemServiceMock = new Mock<IItemService>();
 
             //Act
-            CriarItemController();
-            sutItem.VerificarStatus(status);
+            var sutItemController =  new ItemController(ItemServiceMock.Object);
+            sutItemController.FiltrarPorStatus(status);
 
-            itemServiceMock.Verify(x => x.VerificarStatus(status), Times.Never);
+            //Assert
+            ItemServiceMock.Verify(x => x.FiltrarPorStatus(status), Times.Once);
         }
 
     }

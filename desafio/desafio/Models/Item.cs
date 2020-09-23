@@ -37,18 +37,29 @@ namespace desafio.Models
         public string BorrowedTo { get; set; }
 
 
-        public string TratandoFiltroDeStatus(string status)
+        public static string TratandoFiltroDeStatus(string status)
         {
-            if(status == "Disponivel" || status == "disponivel" || status == "disponível")
+            status = status.ToLower();
+
+            if (status == "disponível")
             {
-                status = "Disponível";
+                status = "disponivel";
             }
-            if (status == "Indisponivel" || status == "indisponivel" || status == "indisponível")
+            if (status == "indisponível")
             {
-                status = "Indisponível";
+                status = "indisponivel";
             }
 
             return status;
+        }
+
+        public static bool VerificarSeStatusTemOsValoresValidos(string status)
+        {
+            if(status == "indisponivel" || status == "disponivel")
+            {
+                return true;
+            }
+            return false;
         }
 
     }

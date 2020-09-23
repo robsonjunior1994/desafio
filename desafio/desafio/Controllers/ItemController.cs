@@ -135,23 +135,33 @@ namespace desafio.Controllers
 
 
         }
-        [HttpGet("BuscarStatus/{status}")]
-        public ActionResult<List<Item>> VerificarStatus(string status)
+
+        [HttpGet("FiltrarPorStatus/{status}")]
+        public ActionResult<List<Item>> FiltrarPorStatus(string status)
         {
-            var listaFiltradaPorStatus = new List<Item>();
 
-            
-
-            if (!string.IsNullOrEmpty(status))
-            {
-                listaFiltradaPorStatus = _itemService.VerificarStatus(status);
-            }
-            else
+            if (string.IsNullOrEmpty(status))
             {
                 return BadRequest();
             }
 
-            return listaFiltradaPorStatus;
+            else
+            {
+                List<Item> listaFiltradaPorStatus;
+
+                var variavelDeStatusTratada = Item.TratandoFiltroDeStatus(status);
+
+                if (Item.VerificarSeStatusTemOsValoresValidos(variavelDeStatusTratada))
+                {
+                    listaFiltradaPorStatus = _itemService.FiltrarPorStatus(variavelDeStatusTratada);
+                }
+                else
+                {
+                    listaFiltradaPorStatus = new List<Item>();
+                }
+
+                return listaFiltradaPorStatus;
+            }
         }
     }
 }

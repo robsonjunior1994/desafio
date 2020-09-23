@@ -29,3 +29,7 @@ C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.Razo
 C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.dll
 C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.pdb
 C:\projetos\Backend\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.genruntimeconfig.cache
+C:\Projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Projetos\desafio\desafio\desafio\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Projetos\desafio\desafio\desafio\obj\Debug\netcoreapp2.2\desafio.genruntimeconfig.cache

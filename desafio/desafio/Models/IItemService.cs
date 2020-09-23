@@ -9,7 +9,7 @@ namespace desafio.Models
     {
         List<Item> Get();
         List<Item> BuscarTipo(string filtro);
-        List<Item> VerificarStatus(string status);
+        List<Item> FiltrarPorStatus(string status);
         Item Get(string id);
         Item Buscar(string keyword);
         Item Create(Item item);

@@ -15,8 +15,6 @@ C:\projetos\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.pdb
 C:\projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\desafio.dll
 C:\projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\desafio.pdb
 C:\projetos\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csproj.CopyComplete
-C:\projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
-C:\projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csprojAssemblyReference.cache
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.AssemblyInfoInputs.cache
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.AssemblyInfo.cs
@@ -38,3 +36,7 @@ C:\projetos\Backend\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\desafio.pd
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csproj.CopyComplete
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.genruntimeconfig.cache
 C:\projetos\Backend\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csproj.CoreCompileInputs.cache
+C:\Projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Projetos\desafio\desafio\UnitTests\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Projetos\desafio\desafio\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.genruntimeconfig.cache

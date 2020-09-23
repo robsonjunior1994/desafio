@@ -77,14 +77,10 @@ namespace desafio.Services
             _items.DeleteOne(item => item.Id == id);
         }
 
-        public List<Item> VerificarStatus(string status)
+        public List<Item> FiltrarPorStatus(string status)
         {
-            var ItemQueOUsuarioEstaProcurando = new Item();
-            ItemQueOUsuarioEstaProcurando.State = status;
-
-            var ItemsPorStatus = _items.Find(item => item.State == ItemQueOUsuarioEstaProcurando.State).ToList();
-
-            return ItemsPorStatus;
+            var ListaDeItensFiltradaPorStatus = _items.Find(item => item.State == status).ToList();
+            return ListaDeItensFiltradaPorStatus;
         }
     }
 }
