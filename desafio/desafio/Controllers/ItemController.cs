@@ -133,7 +133,6 @@ namespace desafio.Controllers
 
             return NotFound();
 
-
         }
 
         [HttpGet("FiltrarPorStatus/{status}")]

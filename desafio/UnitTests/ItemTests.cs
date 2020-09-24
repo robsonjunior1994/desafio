@@ -1,5 +1,6 @@
 using desafio.Controllers;
 using desafio.Models;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -242,13 +243,17 @@ namespace UnitTests
             //Arrange
             string status = "disponivel";
             var ItemServiceMock = new Mock<IItemService>();
+            var listaDeItens = new List<Item>();
 
-            //Act
+
             var sutItemController =  new ItemController(ItemServiceMock.Object);
-            sutItemController.FiltrarPorStatus(status);
+ 
+            itemServiceMock.Setup(x => x.FiltrarPorStatus(status)).Returns(listaDeItens);
+            var teste = sutItemController.FiltrarPorStatus(status).Value;
 
             //Assert
             ItemServiceMock.Verify(x => x.FiltrarPorStatus(status), Times.Once);
+            Assert.True(listaDeItens.Count > 0);
         }
 
     }
